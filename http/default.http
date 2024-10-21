@@ -1,6 +1,22 @@
 GET http://localhost:5290
 
-### endpoint
+### get all products
 GET http://localhost:5290/api/products
+
+### add a product
+POST http://localhost:5290/api/products
+Content-Type: application/json
+
+{
+  "id": 6,
+  "name": "666"
+}
+
+
+
+
+### get 1 products
+GET http://localhost:5290/api/products/3
+
 
 

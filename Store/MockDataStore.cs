@@ -42,6 +42,8 @@ namespace lab1_webapi_event.Store
             return await Task.FromResult(_products);
          }
 
-
+         public async Task<Product> GetProduct(int id){
+            return await Task.FromResult(_products.Single(x => x.Id == id));
+         }
     }
 }

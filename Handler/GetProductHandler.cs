@@ -1,7 +1,7 @@
 
 
 using lab1_webapi_event.Entity;
-using lab1_webapi_event.Queries;
+using lab1_webapi_event.Common.Queries;
 using lab1_webapi_event.Store;
 using MediatR;
 
