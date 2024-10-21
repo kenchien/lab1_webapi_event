@@ -1,0 +1,5 @@
+GET http://localhost:5290
+
+### endpoint
+GET http://localhost:5290/WeatherForecast
+
