@@ -45,5 +45,22 @@ namespace lab1_webapi_event.Store
          public async Task<Product> GetProduct(int id){
             return await Task.FromResult(_products.Single(x => x.Id == id));
          }
+
+        public async Task UpdateProduct(Product product){
+            var index = _products.FindIndex(x => x.Id == product.Id);
+            _products[index] = product;
+            await Task.CompletedTask;
+        }
+
+        public async Task DeleteProduct(int id){
+            _products.Remove(_products.Single(x => x.Id == id));
+            await Task.CompletedTask;
+        }
+
+        public async Task EventOccured(Product product,string message){
+            _products.Single(x=>x.Id==product.Id).Name = $@"{product.Name}({message})";
+            await Task.CompletedTask;
+        }
+
     }
 }
